@@ -1,0 +1,242 @@
+[
+  {
+    "section": "invest",
+    "questionId": 1,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Because investments are constantly evolving to adjust to innovation in the markets, it's more important than ever to have a comprehensive understanding of your investment strategy.",
+        "articleId": 1
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 11
+      }
+    ]
+  },
+  {
+    "section": "invest",
+    "questionId": 2,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Many investors may not consider whether significant risks are being leveraged to reach their goals. When you evaluate your investment strategy, make sure your risk levels are something you are comfortable with.",
+        "articleId": 1
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 12
+      }
+    ]
+  },
+  {
+    "section": "invest",
+    "questionId": 3,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "There are more opportunities than ever before to create positive change through your investments, many of which do not require wholesale changes to your portfolio. It's important to align your investment strategy with your values.",
+        "articleId": 2
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 13
+      }
+    ]
+  },
+  {
+    "section": "borrow",
+    "questionId": 4,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Strategic borrowing can be a valuable tool for long-term investors seeking to take advantage of short-term opportunities. In a low interest rate environment, borrowing might be more advantageous than liquidating assets.",
+        "articleId": 3
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 14
+      }
+    ]
+  },
+  {
+    "section": "borrow",
+    "questionId": 5,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "The effective use of credit is one way to seize an opportunity without disrupting your long-term investment plan. With lending rates near all time lows, it may be advantageous to consider borrowing.",
+        "articleId": 3
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 14
+      }
+    ]
+  },
+  {
+    "section": "borrow",
+    "questionId": 6,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Investors tend to focus only on managing their assets, often neglecting the liability side of their personal balance sheet. Yet, an effective use of borrowing may help you realize opportunities to enhance your wealth in the long term.",
+        "articleId": 4
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 15
+      }
+    ]
+  },
+  {
+    "section": "spend",
+    "questionId": 7,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "People often overlook the impact of spending on their wealth plan. Relative to not having a plan, a spending strategy can actually add to your wealth over time.",
+        "articleId": 5
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 16
+      }
+    ]
+  },
+  {
+    "section": "spend",
+    "questionId": 8,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Spending adds up over time. Evaluating your spending can pinpoint key areas where you can work to reduce the impact it has on your wealth.",
+        "articleId": 5
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 17
+      }
+    ]
+  },
+  {
+    "section": "spend",
+    "questionId": 9,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Your spending strategy should adjust to reflect your fluctuating spending. Having a dynamic plan positions you to navigate every environment accordingly.",
+        "articleId": 5
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 16
+      }
+    ]
+  },
+  {
+    "section": "manage",
+    "questionId": 10,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Taxes can prove to be a significant hidden cost on your wealth. Awareness of these taxes is the first step to mitigating the long term implications.",
+        "articleId": 6
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 18
+      }
+    ]
+  },
+  {
+    "section": "manage",
+    "questionId": 11,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Reducing the impact of taxes requires a multi-faceted approach that considers asset class exposures, asset location and tax-efficient investment products.",
+        "articleId": 6
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 18
+      }
+    ]
+  },
+  {
+    "section": "manage",
+    "questionId": 12,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Charitable giving can create the opportunity to do well by doing good with valuable tax and estate planning benefits.",
+        "articleId": 7
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 19
+      }
+    ]
+  },
+  {
+    "section": "protect",
+    "questionId": 13,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "Having an estate plan is essential when managing taxes during and after your life and can also help ensure your assets end up where you would like them to after your death.",
+        "articleId": 8
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 20
+      }
+    ]
+  },
+  {
+    "section": "protect",
+    "questionId": 14,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "The goal for many wealthy families is to leave behind a legacy that supports their familes, values and philanthropic causes. A well crafted estate plan can significantly minimize your tax liability at death and set up future generations for success.",
+        "articleId": 9
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 21
+      }
+    ]
+  },
+  {
+    "section": "protect",
+    "questionId": 15,
+    "results": [
+      {
+        "score": [0, 1],
+        "recommendation": "It can be easy to get caught up in the here and now. It is important to make sure that your family's wealth is set up to last, with clear cut objectives and a thought-out plan to transfer your wealth.",
+        "articleId": 10
+      },
+      {
+        "score": [2],
+        "recommendation": "",
+        "articleId": 22
+      }
+    ]
+  }
+]

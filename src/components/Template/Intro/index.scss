@@ -1,0 +1,79 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.intro {
+  @include fullHeight;
+  opacity: 0;
+
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+
+    .content-area {
+      flex-grow: 1;
+
+      p {
+        color: $blue;
+      }
+
+      // === Content ===
+      .title-block {
+        min-height: 340px;
+      }
+      @include media-below(lg) {
+        .title-block {
+          min-height: 310px;
+        }
+      }
+      @include media-below(md) {
+        .title-block {
+          min-height: 280px;
+        }
+        .content-block {
+          padding-left: 45%;
+        }
+      }
+      @media only screen and (max-width: 770px) and (min-width: 750px) {
+        .content-block {
+          padding: 0 10%;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .title-block {
+          min-height: 340px;
+        }
+        .content-block {
+          padding-left: 30%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .title-block {
+          min-height: 280px;
+        }
+        h1 {
+          font-size: 2rem;
+          line-height: 40px;
+        }
+      }
+      @include media-below(xs2) {
+        .content-block {
+          padding-left: 0;
+        }
+      }
+      @media screen and (max-width: 420px) {
+        .title-block {
+          min-height: 130px;
+        }
+      }
+    }
+
+    .button-area {
+      flex-basis: $buttonHeight;
+      width: 100%;
+
+      @include stickyButton;
+    }
+  }
+}

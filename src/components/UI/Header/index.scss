@@ -1,0 +1,22 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+header {
+  .nav-container {
+    @include media-below(md) {
+      justify-content: center;
+    }
+
+    a {
+      @include focus;
+    }
+  }
+
+  .logo {
+    max-width: 100%;
+
+    path {
+      transition: all #{$transitionDuration}s;
+    }
+  }
+}

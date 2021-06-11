@@ -1,0 +1,41 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.result-nav {
+  height: $resultNavHeight;
+
+  h3 {
+    color: $white;
+
+    @include media-below(md) {
+      display: none;
+    }
+  }
+
+  .result-nav-links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+
+    a {
+      color: $white;
+      cursor: pointer;
+      @include buttonTransition;
+      margin-right: $spacingBase * 5;
+      text-transform: capitalize;
+      @include fontSize(16, 24);
+      font-weight: 700;
+      @include focus;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active,
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}

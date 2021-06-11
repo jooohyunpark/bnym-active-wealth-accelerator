@@ -1,0 +1,149 @@
+{
+  "summary": [
+    {
+      "type": "perfect",
+      "scoreHigh": 30,
+      "scoreLow": 30,
+      "header": "You’re a savvy investor with a strong Active Wealth plan!",
+      "body": "Based on your responses, it’s clear you’re thinking about how to sustain your long-term financial success. See our thought leadership below for more insights on how you can achieve your financial goals across generations."
+    },
+    {
+      "type": "high",
+      "scoreHigh": 29,
+      "scoreLow": 25,
+      "header": "You’re on the path to Active Wealth success!",
+      "body": "We can see that you’re making sound decisions when it comes to building and sustaining your wealth. With our five wealth practices, we can help you evaluate key practices that can be improved so you can optimize your growth."
+    },
+    {
+      "type": "medium",
+      "scoreHigh": 24,
+      "scoreLow": 11,
+      "header": "You’ve got a great Active Wealth foundation!",
+      "body": "You’ve laid the groundwork, now it’s time to build. With our comprehensive Active Wealth framework, we can help identify how to enhance your wealth strategies, so you can develop and sustain your wealth with confidence."
+    },
+    {
+      "type": "low",
+      "scoreHigh": 10,
+      "scoreLow": 0,
+      "header": "You’ve got great growth potential!",
+      "body": "We know you’re committed to building and sustaining your wealth, and our comprehensive Active Wealth framework has five key practices that can guide you in developing an ideal plan for your financial success."
+    }
+  ],
+  "section": [
+    {
+      "name": "invest",
+      "result": [
+        {
+          "type": "perfect",
+          "scoreHigh": 6,
+          "scoreLow": 6,
+          "text": "You’ve done an excellent job identifying key objectives, lifestyle needs and wealth-transfer goals. And we want to ensure that your investment strategy continues to deliver substantial growth and sustained wealth. See our latest investment thinking below."
+        },
+        {
+          "type": "medium",
+          "scoreHigh": 5,
+          "scoreLow": 3,
+          "text": "You’ve made some wise choices in your investment strategy, but we want to be sure you’re making the most of your investment opportunities. See our recommendations below."
+        },
+        {
+          "type": "low",
+          "scoreHigh": 2,
+          "scoreLow": 0,
+          "text": "If you feel unsure of the next step in your investment strategy, we can help support your wealth goals by designing an asset allocation plan that works for you and the next generation. Explore our recommendations below to find out more."
+        }
+      ]
+    },
+    {
+      "name": "borrow",
+      "result": [
+        {
+          "type": "perfect",
+          "scoreHigh": 6,
+          "scoreLow": 6,
+          "text": "Well done! As an informed investor, you know that strategic borrowing can unleash the power of leverage. See our thought leadership materials below for further insight."
+        },
+        {
+          "type": "medium",
+          "scoreHigh": 5,
+          "scoreLow": 3,
+          "text": "You already know that borrowing funds can be more advantageous than liquidating assets, but there’s even more you can do to take advantage of this low-interest rate environment. Explore our recommendations below to find out more."
+        },
+        {
+          "type": "low",
+          "scoreHigh": 2,
+          "scoreLow": 0,
+          "text": "We understand that sometimes investors are hesitant to borrow. But strategic borrowing can actually unlock the value of assets to meet liquidity needs and enhance total net worth over time. See why borrowing can be a smart strategy, below."
+        }
+      ]
+    },
+    {
+      "name": "spend",
+      "result": [
+        {
+          "type": "perfect",
+          "scoreHigh": 6,
+          "scoreLow": 6,
+          "text": "Well done! You already understand how to preserve your assets and sustain long-term wealth by setting a clear spending strategy. Below are some of our thought leadership materials to offer you greater insight and perspective."
+        },
+        {
+          "type": "medium",
+          "scoreHigh": 5,
+          "scoreLow": 3,
+          "text": "You’ve already made wise decisions when it comes to spending your wealth! But we want to make sure that your strategy is flexible enough to respond to changing circumstances. Below are some simple tips to help you enhance your approach to spending."
+        },
+        {
+          "type": "low",
+          "scoreHigh": 2,
+          "scoreLow": 0,
+          "text": "Did you know that small changes in spending can have a significant impact on wealth? We want to help you design a spending strategy that can increase your long-term wealth so you can sustain and build with ease. Below are some recommendations we’ve curated just for you."
+        }
+      ]
+    },
+    {
+      "name": "manage",
+      "result": [
+        {
+          "type": "perfect",
+          "scoreHigh": 6,
+          "scoreLow": 6,
+          "text": "You understand how important it is to manage the costs and drag in your portfolio, so you’ve employed wise, tax-efficient practices in your investment strategy. But even a smart investor can benefit from some additional information for how to continue to build and sustain wealth."
+        },
+        {
+          "type": "medium",
+          "scoreHigh": 5,
+          "scoreLow": 3,
+          "text": "You already understand that paying attention to after-tax returns is an essential component of your tax-efficient investment strategy, but we believe there are ways to better maximize the management of your portfolio. See our recommendations below."
+        },
+        {
+          "type": "low",
+          "scoreHigh": 2,
+          "scoreLow": 0,
+          "text": "Managing and mitigating the cost of federal, state and local taxes on income, estates, capital gains and property is a critical part of maximizing wealth. And we want to help you get there. Discover how to make the most of your portfolio with some of our recommendations below."
+        }
+      ]
+    },
+    {
+      "name": "protect",
+      "result": [
+        {
+          "type": "perfect",
+          "scoreHigh": 6,
+          "scoreLow": 6,
+          "text": "Excellent! You’re taking key steps to safeguard your legacy. Because you know that building wealth today means being able to provide for the next generation tomorrow. View our thought leadership materials below to gain new insight and perspective."
+        },
+        {
+          "type": "medium",
+          "scoreHigh": 5,
+          "scoreLow": 3,
+          "text": "We know you’re dedicated to protecting your assets against unintended consequences. Our recommendations below further outline some ideas for how you can build a lasting legacy."
+        },
+        {
+          "type": "low",
+          "scoreHigh": 2,
+          "scoreLow": 0,
+          "text": "As one of the safest financial institutions in the world, we understand just how important it is to implement advanced planning to create sustainable, multigenerational wealth. We can offer you recommendations for how you can protect the wealth you’ve worked so hard to build."
+        }
+      ]
+    }
+  ]
+}

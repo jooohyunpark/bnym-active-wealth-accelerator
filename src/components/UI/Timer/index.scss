@@ -1,0 +1,31 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.timer {
+  .timer-bar-container {
+    @include media-above(sm) {
+      padding-top: $spacingBase * 3;
+    }
+    @include media-above(md) {
+      padding-top: $spacingBase * 4;
+    }
+  }
+
+  &.light {
+    .MuiLinearProgress-root {
+      background-color: $white50;
+    }
+    .MuiLinearProgress-bar {
+      background-color: $white;
+    }
+  }
+
+  &.dark {
+    .MuiLinearProgress-root {
+      background-color: $white;
+    }
+    .MuiLinearProgress-bar {
+      background-color: $blue;
+    }
+  }
+}

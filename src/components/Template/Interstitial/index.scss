@@ -1,0 +1,49 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.interstitial {
+  background-color: $lightBlue;
+  height: 100%;
+  z-index: 1;
+
+  .interstitial-content-area {
+    color: $blue;
+    flex-grow: 1;
+    display: flex;
+
+    @include media-above(sm) {
+      align-items: center;
+    }
+
+    .summary {
+      margin-bottom: $spacingBase * 8;
+    }
+
+    h2 {
+      margin-bottom: $spacingBase * 3;
+    }
+
+    .stats {
+      padding-left: $spacingBase * 3;
+      border-left: 4px solid $black;
+      margin-bottom: $spacingBase * 5;
+
+      .h1 {
+        color: $orange;
+        font-style: normal;
+        transform: translateX(-20px);
+        opacity: 0;
+      }
+    }
+    .source {
+      @include fontSize(14, 18);
+    }
+  }
+
+  .interstitial-button-area {
+    flex-basis: $buttonHeight;
+    width: 100%;
+
+    @include stickyButton;
+  }
+}

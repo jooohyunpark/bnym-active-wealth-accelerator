@@ -1,0 +1,36 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+@import '@/styles/buttons';
+
+.next-button {
+  width: 240px;
+  opacity: 0;
+  transform: translateY(20px);
+  margin: 0 auto;
+
+  @include media-below(sm) {
+    width: 100%;
+  }
+
+  .outlined {
+    &#button-intro {
+      background-color: $lightGold;
+    }
+
+    &#button-interstitial {
+      background-color: $lightBlue;
+    }
+
+    &#button-intro,
+    &#button-interstitial {
+      &:hover {
+        background-color: $black;
+        color: $white;
+
+        svg {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

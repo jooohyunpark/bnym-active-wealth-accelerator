@@ -1,0 +1,54 @@
+@import '@/styles/mixins';
+
+$legalBG: #f2f2f2;
+$legalHeight: 100px;
+
+.legal {
+  .legal-area {
+    display: flex;
+    align-items: center;
+    height: $legalHeight;
+    background-color: $legalBG;
+
+    .legal-cta {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      padding: 0 $spacingBase * 4;
+      cursor: pointer;
+      height: 100%;
+      @include focus;
+
+      svg {
+        transition: all 0.2s linear;
+      }
+
+      span {
+        margin-left: $spacingBase;
+      }
+    }
+
+    .button {
+      margin: 0 $spacingBase * 4;
+    }
+  }
+
+  .legal-content {
+    background-color: $legalBG;
+    padding: 0 $spacingBase * 4 $spacingBase * 4 $spacingBase * 4;
+    display: none;
+
+    p {
+      margin-bottom: $spacingBase * 2;
+    }
+  }
+
+  &.expanded {
+    svg {
+      transform: rotate(90deg);
+    }
+    .legal-content {
+      display: block;
+    }
+  }
+}

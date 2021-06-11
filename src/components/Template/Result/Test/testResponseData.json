@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "header": "You’ve got great growth potential!",
+    "body": "We know you’re committed to building and sustaining your wealth, and our comprehensive Active Wealth framework has five key practices that can guide you in developing an ideal plan for your financial success."
+  },
+  "sections": [
+    {
+      "section": "invest",
+      "score": 0,
+      "recommendations": [
+        "Because investments are constantly evolving to adjust to innovation in the markets, it's more imporant than ever to have a comprehensive understanding of your investment strategy. Review yours with one of our wealth advisors.",
+        "Many investors may not consider whether significant risks are being leveraged to reach their goals. When you evaluate your investment strategy, make sure your risk levels are something you are comfortable with.",
+        "There are more opportunities than ever before to create positive change through your investments, many of which do not require wholesale changes to your portfolio. Ask your wealth advisor about strategies to align your investments to reflect your values."
+      ],
+      "articles": [
+        {
+          "linkText": "Maximize Long-Term Compounding",
+          "link": "https://www.bnymellonwealth.com/articles/strategy/maximize-long-term-compounding.jsp",
+          "copy": "Investors who do not fully understand the relationship between risk and return, or who fail to maintain a long-term perspective in the face of short-term challenges, are more likely to underperform their benchmarks."
+        },
+        {
+          "linkText": "From Philanthropy to Social Investment: Funding the Ecosystem",
+          "link": "https://www.bnymellonwealth.com/articles/strategy/from-philanthropy-to-social-investment-funding-the-ecosystem.jsp",
+          "copy": "Finding meaning and purpose in how wealth is deployed for philanthropic ends is a balancing act. A \"philanthropic portfolio\" can help givers find that balance."
+        }
+      ],
+      "articlesIncluded": [1, 2],
+      "copy": "If you feel unsure of the next step in your investment strategy, we can help support your wealth goals by designing an asset allocation plan that works for you and the next generation. Explore our recommendations below to find out more."
+    },
+    {
+      "section": "borrow",
+      "score": 0,
+      "recommendations": [],
+      "articles": [],
+      "articlesIncluded": [],
+      "copy": "We understand that sometimes investors are hesitant to borrow. But strategic borrowing can actually unlock the value of assets to meet liquidity needs and enhance total net worth over time. See why borrowing can be a smart strategy, below."
+    },
+    {
+      "section": "spend",
+      "score": 0,
+      "recommendations": [],
+      "articles": [],
+      "articlesIncluded": [],
+      "copy": "Did you know that small changes in spending can have a significant impact on wealth? We want to help you design a spending strategy that can increase your long-term wealth so you can sustain and build with ease. Below are some recommendations we’ve curated just for you. "
+    },
+    {
+      "section": "manage",
+      "score": 0,
+      "recommendations": [],
+      "articles": [],
+      "articlesIncluded": [],
+      "copy": "Managing and mitigating the cost of federal, state and local taxes on income, estates, capital gains and property is a critical part of maximizing wealth. And we want to help you get there. Discover how to make the most of your portfolio with some of our recommendations below."
+    },
+    {
+      "section": "protect",
+      "score": 0,
+      "recommendations": [],
+      "articles": [],
+      "articlesIncluded": [],
+      "copy": "As one of the safest financial institutions in the world, we understand just how important it is to implement advanced planning to create sustainable, multigenerational wealth. We can offer you recommendations for how you can protect the wealth you’ve worked so hard to build. "
+    }
+  ]
+}

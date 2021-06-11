@@ -1,0 +1,135 @@
+@import '@/styles/vars';
+@import '@/styles/fonts';
+@import '@/styles/buttons';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  #root {
+    width: 100%;
+
+    .app {
+      main {
+        position: relative;
+        min-height: 100vh;
+      }
+    }
+  }
+}
+
+#pageTitle {
+  position: absolute;
+  left: -9999px;
+  z-index: -11111;
+  pointer-events: none;
+  opacity: 0;
+  color: transparent;
+  background: transparent;
+}
+
+.base-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+
+  .base-background-area {
+    width: 100%;
+    height: 100%;
+    max-width: map-get($breakpoints, xl);
+    margin: 0 auto;
+    background-color: $lightGold;
+  }
+}
+
+button,
+.button {
+  @include focus;
+
+  &.outlined {
+    @include buttonOutlined;
+  }
+
+  &.contained {
+    @include buttonContained;
+  }
+}
+
+/* grids */
+.MuiContainer-root {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/* remove vertical spacing computation from material ui */
+.MuiGrid-root {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.MuiGrid-container {
+  max-width: map-get($breakpoints, xl);
+
+  &.MuiGrid-item {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.MuiBox-root {
+  max-width: map-get($breakpoints, xl);
+}
+
+/* gutter */
+.gutter-outer {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+
+  @include media-above(sm) {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  @include media-above(lg) {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+  @include media-above(xl) {
+    padding-left: 120px !important;
+    padding-right: 120px !important;
+  }
+}
+.MuiGrid-item,
+.gutter-inner {
+  padding: 3px;
+
+  @include media-above(sm) {
+    padding: 4px;
+  }
+  @include media-above(lg) {
+    padding: 4px;
+  }
+  @include media-above(xl) {
+    padding: 8px;
+  }
+}
+
+/* css transition */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity #{$transitionDuration}s;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity #{$transitionDuration}s;
+}

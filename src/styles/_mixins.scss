@@ -1,0 +1,133 @@
+@import '@/styles/vars';
+
+@mixin media-below($keys...) {
+  @each $key in $keys {
+    @media (max-width: map-get($breakpoints, $key) - 1) {
+      @content;
+    }
+  }
+}
+@mixin media-above($keys...) {
+  @each $key in $keys {
+    @media (min-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  }
+}
+
+@mixin font-media-below($keys...) {
+  @each $key in $keys {
+    @media (max-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  }
+}
+
+@mixin fontSize($size: 16, $lineHeight: 20) {
+  font-size: ($size / 16) + rem;
+  line-height: ($lineHeight / 16) + rem;
+}
+
+@mixin fullHeight {
+  min-height: 100vh;
+  padding-top: $headerHeight + $progressHeight !important;
+
+  @include media-below(sm) {
+    padding-top: $headerHeight + $progressHeight / 2 !important;
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin font-lockup($fs, $fl, $vps, $vpl, $lh) {
+  //$f = $m*$vp + $b;// font($f) in pixels
+  $m: ($fl - $fs) / strip-unit($vpl - $vps);
+  $b: $fs - ($m * strip-unit($vps));
+  //rem settings for 16px html - change for other html sizes 0.0625 = 1px
+  $r: 0.0625;
+  //set up variables for calc
+  $baseline: ($fs * $r) + rem; //baseline font size in rem
+  $b2: ($b - $fs) + px; //what we need to add to the baseline
+  $vw: ($m * 100) + vw; ///our viewport (*100 because vw units are in percentage)
+  $min: strip-unit($vps) + px; // min for media queries
+  $max: strip-unit($vpl) + px; //max for media queries
+  $font_diff: ($fl - $fs) + px; /// difference in font sizes
+  ///initials
+  font-size: $baseline;
+  line-height: $lh + em;
+
+  //
+  @media (min-width: $min) {
+    font-size: calc(#{$baseline} + #{$vw} + #{$b2});
+  }
+
+  @media (min-width: $max) {
+    font-size: calc(#{$baseline} + #{$font_diff});
+  }
+}
+
+@mixin stickyBottom {
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  bottom: 0;
+}
+
+@mixin stickyButton {
+  padding-top: $spacingBase * 2;
+  padding-bottom: $buttonBottomSpacing;
+  @include stickyBottom;
+
+  @include media-below(sm) {
+    padding-bottom: $spacingBase * 2;
+  }
+}
+
+@mixin buttonTransition {
+  transition: all 0.2s linear;
+}
+
+@mixin scrollbar {
+  $size: 5px;
+  $thumb-color: #c4c4c4;
+  $background-color: transparent;
+
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  & {
+    // For Internet Explorer
+    scrollbar-face-color: $thumb-color;
+    scrollbar-track-color: $background-color;
+
+    // firefox
+    scrollbar-color: $thumb-color $background-color;
+    scrollbar-width: thin;
+  }
+}
+
+@mixin focus {
+  &:focus-visible {
+    outline: 5px auto Highlight;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}

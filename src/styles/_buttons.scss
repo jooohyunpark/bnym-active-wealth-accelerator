@@ -1,0 +1,33 @@
+@import '@/styles/vars';
+
+@mixin buttonOutlined {
+  border: 2px solid $black;
+  @include buttonTransition;
+  color: $black;
+
+  svg {
+    fill: $black;
+    @include buttonTransition;
+  }
+
+  & {
+    &:hover {
+      background-color: $black;
+      color: $white;
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
+
+@mixin buttonContained {
+  background-color: $orange;
+  border: none;
+  @include buttonTransition;
+
+  &:hover {
+    background-color: #ee977b;
+  }
+}

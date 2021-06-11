@@ -1,0 +1,30 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.clip-background {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+    @include media-below(md) {
+      height: 100%;
+    }
+  }
+
+  .orange-background {
+    @include media-below(sm) {
+      display: none;
+    }
+  }
+
+  .gradient-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: linear-gradient(9.92deg, #ece8dc 10.46%, #ffffff 125.49%);
+    transform: rotate(-180deg);
+    object-position: 50% 50%;
+  }
+}

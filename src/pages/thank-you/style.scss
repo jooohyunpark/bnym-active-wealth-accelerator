@@ -1,0 +1,39 @@
+@import '@/styles/vars';
+@import '@/styles/fonts';
+@import '@/styles/mixins';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root-thankyou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .content-area {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+
+    h1 {
+      @include PublicoPro;
+      font-weight: 400;
+      font-style: italic;
+      color: $blue;
+      margin-bottom: 80px;
+    }
+
+    .form-legal {
+      color: map-get($grayscale, 2);
+    }
+  }
+}

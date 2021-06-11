@@ -1,0 +1,40 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.progress {
+  .progress-bar-container {
+    height: $progressHeight;
+
+    @include media-above(sm) {
+      padding-top: $spacingBase * 3;
+    }
+    @include media-above(md) {
+      padding-top: $spacingBase * 4;
+    }
+
+    .progress-bar {
+      &.inactive {
+        background-color: #000;
+        opacity: 0.1;
+
+        .MuiLinearProgress-bar {
+          background-color: transparent;
+        }
+      }
+    }
+
+    label {
+      &.inactive {
+        display: none;
+      }
+
+      @include media-above(xl) {
+        font-size: 16px;
+      }
+
+      @include media-below(sm) {
+        display: none;
+      }
+    }
+  }
+}

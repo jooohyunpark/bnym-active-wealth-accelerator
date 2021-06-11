@@ -1,0 +1,22 @@
+[
+  {
+    "label": "label 1",
+    "score": 20
+  },
+  {
+    "label": "label 2",
+    "score": 40
+  },
+  {
+    "label": "label 3",
+    "score": 60
+  },
+  {
+    "label": "label 4",
+    "score": 80
+  },
+  {
+    "label": "label 5",
+    "score": 100
+  }
+]

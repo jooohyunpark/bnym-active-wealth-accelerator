@@ -1,0 +1,89 @@
+@import '@/styles/fonts';
+@import '@/styles/vars';
+
+$height: 48px;
+
+#snippet_1620998421752 {
+  opacity: 0;
+  height: 100%;
+
+  form {
+    padding: $spacingBase * 5;
+    height: 100%;
+    overflow: auto;
+
+    ul {
+      list-style: none;
+      width: 400px;
+      max-width: 100%;
+      margin: 0 auto;
+
+      li {
+        margin: 8px 0;
+
+        br {
+          display: none;
+        }
+
+        label {
+          @include Akkurat;
+          @include fontSize(14, 24);
+          font-weight: 700;
+          color: map-get($grayscale, 2);
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    h2 {
+      @include h2;
+      margin-bottom: 16px;
+      color: $blue;
+    }
+
+    p {
+      color: $blue;
+    }
+
+    #first-name,
+    #last-name,
+    #email {
+      padding-left: $spacingBase * 2;
+      padding-right: $spacingBase * 2;
+      margin-bottom: 8px;
+      width: 100%;
+      height: $height;
+      @include Akkurat;
+      @include fontSize(16, 24);
+    }
+
+    #submitid {
+      width: 100%;
+      height: $height;
+      position: relative !important;
+      background: $blue;
+      color: $white;
+      @include Akkurat;
+      @include fontSize(16, 24);
+      cursor: pointer;
+      margin-bottom: 24px;
+      margin-top: -16px;
+    }
+
+    .skip-button-div {
+      margin-bottom: $spacingBase * 3;
+
+      .skip-button {
+        cursor: pointer;
+        @include Akkurat;
+        @include fontSize(16, 24);
+        font-weight: 700;
+        color: $blue;
+      }
+    }
+
+    .form-legal {
+      color: map-get($grayscale, 2);
+    }
+  }
+}

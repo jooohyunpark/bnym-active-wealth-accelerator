@@ -1,0 +1,206 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.result {
+  min-height: 100vh;
+  padding-top: $headerHeight !important;
+  opacity: 0;
+  background-color: $lightGold;
+
+  @include media-below(md) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .result-nav-area-desktop {
+    flex-basis: $resultNavHeight;
+  }
+
+  .result-content-container {
+    flex-grow: 1;
+
+    @include media-below(md) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .chart-area {
+      display: flex;
+      flex-direction: column;
+      max-height: calc(100vh - #{$headerHeight} - #{$resultNavHeight});
+      padding-top: $spacingBase * 5 !important;
+      padding-bottom: $spacingBase * 5 !important;
+
+      @include media-below(md) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: $spacingBase * 3 !important;
+        min-height: 540px;
+      }
+      @include media-below(sm) {
+        min-height: 480px;
+      }
+      @media (max-width: 374px) {
+        min-height: 400px;
+      }
+
+      .mobile-label {
+        height: 40px;
+      }
+
+      .chart-div {
+        height: calc(100% - 40px);
+      }
+    }
+
+    .result-content-area {
+      .result-content {
+        @include scrollbar;
+      }
+
+      max-height: calc(100vh - #{$headerHeight} - #{$resultNavHeight});
+      padding-top: $spacingBase * 5 !important;
+      padding-bottom: $spacingBase * 5 !important;
+
+      @include media-below(md) {
+        padding: 0 !important;
+        max-height: unset;
+      }
+
+      h2,
+      .h2 {
+        text-transform: capitalize;
+        margin-bottom: $spacingBase * 3;
+        color: $black;
+      }
+
+      .h4 {
+        text-transform: uppercase;
+        margin-bottom: $spacingBase * 2;
+      }
+
+      P {
+        color: $black;
+      }
+
+      ul {
+        padding-left: $spacingBase * 3;
+
+        li {
+          margin-bottom: $spacingBase * 3;
+          color: $black;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      hr {
+        border: 0;
+        width: 100%;
+        height: 1px;
+        background: #c4c4c4;
+        margin-bottom: $spacingBase * 3;
+      }
+
+      .summary,
+      .recommendations,
+      .articles {
+        margin-bottom: $spacingBase * 4;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .overview {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+
+        @include media-below(md) {
+          justify-content: flex-start;
+        }
+      }
+
+      .article {
+        margin-bottom: $spacingBase * 6;
+
+        .article-title {
+          margin-bottom: $spacingBase;
+
+          @include fontSize(24, 32);
+
+          @include media-below(md) {
+            @include fontSize(20, 28);
+          }
+
+          a {
+            &:hover {
+              margin-bottom: 2px;
+              border-bottom: 4px solid $black;
+            }
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .contact-us {
+        span {
+          max-width: 360px;
+        }
+
+        button {
+          min-width: 120px;
+          margin-left: $spacingBase;
+        }
+
+        @include media-below(md) {
+          span {
+            max-width: unset;
+          }
+        }
+
+        @include media-below(sm) {
+          flex-direction: column;
+
+          button {
+            width: 100%;
+            margin-top: $spacingBase * 3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .backdrop {
+    background: linear-gradient(180deg, rgba(0, 72, 94, 0.5) 0%, #000000 65.33%);
+  }
+
+  .iframe-container {
+    margin: $spacingBase * 2;
+    max-width: calc(100% - #{$spacingBase * 2 * 2}) !important;
+
+    @include media-below(sm) {
+      height: 100%;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}

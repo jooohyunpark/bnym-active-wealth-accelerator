@@ -1,0 +1,153 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.landing {
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+
+  //////// take of after result development /
+  // display: none !important;
+  /////////
+
+  .landing-area {
+    padding-top: $headerHeight + $progressHeight;
+    padding-left: $spacingBase * 2;
+    padding-right: $spacingBase * 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    max-width: map-get($breakpoints, xl);
+    min-height: 100vh;
+    margin: 0 auto;
+
+    @include media-below(sm) {
+      padding-top: $headerHeight;
+    }
+
+    .background {
+      z-index: 0;
+    }
+
+    .landing-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      padding-top: 0;
+      padding-bottom: 0;
+      flex: 1;
+
+      .content-area {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        p {
+          color: $blue;
+        }
+
+        .title {
+          color: $white;
+          transform: translateX(-40px);
+          opacity: 0;
+
+          &.bottom {
+            margin-left: 100% / 12 * 2;
+
+            @include media-below(sm) {
+              margin-left: 0;
+            }
+          }
+        }
+
+        .grid-item {
+          width: 50%;
+
+          &.custom {
+            width: 100% * 5 / 12;
+          }
+          @include media-below(md) {
+            width: 100%;
+            &.custom {
+              width: 100%;
+            }
+            &.spacer {
+              display: none;
+            }
+          }
+          // === Content ===
+          &.title-block {
+            min-height: 340px;
+          }
+          @include media-below(lg) {
+            &.title-block {
+              min-height: 310px;
+            }
+          }
+          @include media-below(md) {
+            &.title-block {
+              min-height: 280px;
+            }
+            &.content-block {
+              padding-left: 45%;
+            }
+          }
+          @media only screen and (max-width: 770px) and (min-width: 750px) {
+            &.content-block {
+              padding: 0 10%;
+            }
+          }
+          @media screen and (max-width: 767px) {
+            &.title-block {
+              min-height: 340px;
+            }
+            &.content-block {
+              padding-left: 30%;
+            }
+          }
+          @media screen and (max-width: 480px) {
+            &.title-block {
+              min-height: 280px;
+            }
+            h1 {
+              font-size: 2rem;
+              line-height: 37px;
+            }
+          }
+          @include media-below(xs2) {
+            &.content-block {
+              padding-left: 0;
+            }
+          }
+          @media screen and (max-width: 420px) {
+            &.title-block {
+              min-height: 170px;
+            }
+          }
+        }
+      }
+
+      .button-area {
+        width: 100%;
+        flex-basis: $buttonHeight;
+        @include stickyButton;
+
+        .button-div {
+          padding-top: 0;
+          padding-bottom: 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

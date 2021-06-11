@@ -1,0 +1,44 @@
+/* breakpoint */
+$breakpoints: (
+  xs: 0,
+  xs2: 580px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1440px,
+  xl: 1920px
+);
+
+/* spacing & sizing */
+$spacingBase: 8px;
+$headerHeight: 80px;
+$progressHeight: 80px;
+$transitionDuration: 0.5;
+$buttonHeight: 60px;
+$buttonBottomSpacing: 60px;
+$resultNavHeight: 60px;
+
+/* colors */
+$blue: #00485e;
+$lightBlue: #e6edef;
+$black: #000000;
+$white: #ffffff;
+$white50: #ffffff80;
+$orange: #eb5524;
+$error: #ff0000;
+$success: #00b102;
+//
+$webSafeGold: #857644;
+$gold: #b3a369;
+$lightGold: #ece8db;
+$slate: #58595b;
+$pewter: #808285;
+$lightGray: #dedede;
+//
+$grayscale: (
+  1: #333333,
+  2: #666666,
+  3: #999999,
+  4: #dddddd,
+  5: #eeeeee,
+  6: #f6f6f6
+);

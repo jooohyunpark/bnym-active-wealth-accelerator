@@ -1,0 +1,38 @@
+@import '@/styles/vars';
+
+:export {
+  //
+  transitionDuration: $transitionDuration;
+  //
+  xs: map-get($breakpoints, xs);
+  sm: map-get($breakpoints, sm);
+  md: map-get($breakpoints, md);
+  lg: map-get($breakpoints, lg);
+  xl: map-get($breakpoints, xl);
+  //
+  spacingBase: $spacingBase;
+  headerHeight: $headerHeight;
+  buttonHeight: $buttonHeight;
+  buttonBottomSpacing: $buttonBottomSpacing;
+  //
+  blue: $blue;
+  lightBlue: $lightBlue;
+  black: $black;
+  white: $white;
+  white50: $white50;
+  orange: $orange;
+  error: $error;
+  success: $success;
+  webSafeGold: $webSafeGold;
+  gold: $gold;
+  lightGold: $lightGold;
+  slate: $slate;
+  pewter: $pewter;
+  lightGray: $lightGray;
+  gray-1: map-get($grayscale, 1);
+  gray-2: map-get($grayscale, 2);
+  gray-3: map-get($grayscale, 3);
+  gray-4: map-get($grayscale, 4);
+  gray-5: map-get($grayscale, 5);
+  gray-6: map-get($grayscale, 6);
+}

@@ -1,0 +1,297 @@
+[
+  {
+    "name": "invest",
+    "intro": {
+      "introId": 1,
+      "name": "invest/intro",
+      "title": "Invest",
+      "headline": "Investing is central to our Active Wealth approach - and to your financial well-being.",
+      "text": "When faced with volatility, you may feel compelled to sell assets in the hope of stemming your losses. But being out of the market for even a short time can significantly reduce the long-term value of your portfolio.",
+      "bgImageSrc": "assets/img/aw_invest.jpg",
+      "bgImageAlt": "Wide overhead shot of several windmills on a hilltop extending out into the distance with a mountain range in the background."
+    },
+    "question": [
+      {
+        "questionId": 1,
+        "name": "invest/question/1",
+        "eyebrow": "INVESTMENT STRATEGY",
+        "text": "Do you feel you understand your current investment strategy?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      },
+      {
+        "questionId": 2,
+        "name": "invest/question/2",
+        "eyebrow": "RISK",
+        "text": "Are your investments consistent with your overall risk appetite?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      },
+      {
+        "questionId": 3,
+        "name": "invest/question/3",
+        "eyebrow": "SUSTAINABILITY + SOCIAL IMPACT",
+        "text": "Does your advisor offer sustainability and social impact investment guidance?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "borrow",
+    "intro": {
+      "introId": 2,
+      "name": "borrow/intro",
+      "title": "Borrow",
+      "headline": "Now, let’s look at your appetite for borrowing.",
+      "text": "Strategic borrowing can help achieve long-term investment goals. While borrowing is often seen as a money or debt decision, in reality, it can be part of a smart investment strategy.",
+      "bgImageSrc": "assets/img/aw_borrow.jpg",
+      "bgImageAlt": "Overhead, drone shot of white sailboats sailing through the open seas during the day."
+    },
+    "question": [
+      {
+        "questionId": 4,
+        "name": "borrow/question/1",
+        "eyebrow": "DEBT UTILIZATION",
+        "text": "Do you use debt as an active component of your financial plan?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      },
+      {
+        "questionId": 5,
+        "name": "borrow/question/2",
+        "eyebrow": "FINANCING WITH DEBT",
+        "text": "Would you consider using debt to finance a large purchase?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ],
+        "interstitial": [
+          {
+            "content": "Did you know?",
+            "text1": "The top",
+            "stat1": "1%",
+            "text2": "of American households hold",
+            "stat2": "$739 billion",
+            "text3": "of total personal debt.",
+            "source": "Board of Governors of the Federal Reserve System (US), 2019"
+          },
+          {
+            "content": "You're in good company.",
+            "text1": "The top",
+            "stat1": "1%",
+            "text2": "of American households hold",
+            "stat2": "$739 billion",
+            "text3": "of total personal debt.",
+            "source": "Board of Governors of the Federal Reserve System (US), 2019"
+          }
+        ]
+      },
+      {
+        "questionId": 6,
+        "name": "borrow/question/3",
+        "eyebrow": "CREDIT LINE",
+        "text": "Do you currently have an investment credit line as part of your overall wealth strategy?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "spend",
+    "intro": {
+      "introId": 3,
+      "name": "spend/intro",
+      "title": "Spend",
+      "headline": "Let's talk about spending.",
+      "text": "Small changes in spending can have a significant impact on wealth. A dynamic spending strategy can help ensure you make the most of your wealth—and your life.",
+      "bgImageSrc": "assets/img/aw_spend.jpg",
+      "bgImageAlt": "Architectural detail of interior wood inlay."
+    },
+    "question": [
+      {
+        "questionId": 7,
+        "name": "spend/question/1",
+        "eyebrow": "SPEND STRATEGY",
+        "text": "Is having a spend strategy for your overall investment plan important to you?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ],
+        "interstitial": [
+          {
+            "content": "Small changes in spending can have a significant impact on wealth.",
+            "text1": "For example, increasing spending by just",
+            "stat1": "1%",
+            "text2": "can decrease wealth by",
+            "stat2": "21%",
+            "text3": "over 20 years.",
+            "source": "For illustrative purposes only. Does not represent actual client results. Growth of $20M at 5.25% for 20 years."
+          },
+          {
+            "content": "Did you know?",
+            "text1": "Decreasing spending by just",
+            "stat1": "1%",
+            "text2": "can increase wealth by",
+            "stat2": "21%",
+            "text3": "over 20 years.",
+            "source": "For illustrative purposes only. Does not represent actual client results. Growth of $20M at 5.25% for 20 years."
+          }
+        ]
+      },
+      {
+        "questionId": 8,
+        "name": "spend/question/2",
+        "eyebrow": "SPENDING AS AN ASSET",
+        "text": "Do you know what your spending represents as a percentage of your total assets?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      },
+      {
+        "questionId": 9,
+        "name": "spend/question/3",
+        "eyebrow": "ADJUSTING YOUR SPENDING",
+        "text": "Do you adjust your spending to reflect economic, market, and life changes?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "manage",
+    "intro": {
+      "introId": 4,
+      "name": "manage/intro",
+      "title": "Manage",
+      "headline": "Let's talk about managing your wealth.",
+      "text": "Managing and mitigating the cost of federal, state and local taxes on income, estates, capital gains and property are critical to maximizing wealth - and ensuring the overall wellness of your portfolio.",
+      "bgImageSrc": "assets/img/aw_manage.jpg",
+      "bgImageAlt": "Wide drone shot of a bird’s eye view of colorful rooftops in geometric blocks."
+    },
+    "question": [
+      {
+        "questionId": 10,
+        "name": "manage/question/1",
+        "eyebrow": "MANAGING TAXES",
+        "text": "Do you understand how taxes and costs can impact the growth of your portfolio?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      },
+      {
+        "questionId": 11,
+        "name": "manage/question/2",
+        "eyebrow": "MINIMIZING TAX DRAG",
+        "text": "Does your advisor provide solutions that minimize taxes in your portfolio?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      },
+      {
+        "questionId": 12,
+        "name": "manage/question/3",
+        "eyebrow": "CHARITABLE GIVING",
+        "text": "Are you maximizing the value of your charitable gifts?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "protect",
+    "intro": {
+      "introId": 5,
+      "name": "protect/intro",
+      "title": "Protect",
+      "headline": "Let’s evaluate how you are protecting your assets.",
+      "text": "For more than 200 years, we've safeguarded the wealth of some of the most successful individuals and families around the world, helping them protect what matters most - their legacy. And we can do the same for you.",
+      "bgImageSrc": "assets/img/aw_protect.jpg",
+      "bgImageAlt": "Overhead drone shot of foggy, lush, green treetops."
+    },
+    "question": [
+      {
+        "questionId": 13,
+        "name": "protect/question/1",
+        "eyebrow": "ESTATE PLANNING",
+        "text": "Do you have an estate plan?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ],
+        "interstitial": [
+          {
+            "content": "Did you know?",
+            "text1": "",
+            "stat1": "70%",
+            "text2": "of families lose their wealth by the second generation and estimated",
+            "stat2": "90%",
+            "text3": "of families lose their wealth by the 3rd generation. Having an estate plan can help you leave behind a legacy that matters.",
+            "source": "William + Pressier"
+          },
+          {
+            "content": "Did you know?",
+            "text1": "",
+            "stat1": "70%",
+            "text2": "of families lose their wealth by the second generation and estimated",
+            "stat2": "90%",
+            "text3": "of families lose their wealth by the 3rd generation. Having an estate plan can help you leave behind a legacy that matters.",
+            "source": "William + Pressier"
+          }
+        ]
+      },
+      {
+        "questionId": 14,
+        "name": "protect/question/2",
+        "eyebrow": "GIFTING STRATEGIES",
+        "text": "Are you maximizing transfer / gifting strategies to reduce your taxable estate?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      },
+      {
+        "questionId": 15,
+        "name": "protect/question/3",
+        "eyebrow": "ASSET TRANSFER",
+        "text": "Do you have a strategy to pass on your assets after death?",
+        "answer": [
+          { "text": "No, I'm not sure", "score": 0 },
+          { "text": "Somewhat", "score": 1 },
+          { "text": "Yes", "score": 2 }
+        ]
+      }
+    ]
+  }
+]

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import { Grid, Box } from '@material-ui/core'
-import Timer from '@/components/UI/Timer'
 import NextButton from '@/components/UI/Button/Next'
 import { staggerTo, resetFocus } from '@/util'
 import './index.scss'
@@ -32,8 +31,6 @@ const Interstitial = (props) => {
 
   return (
     <Grid className="interstitial" container item direction="row">
-      {/* <Timer start={true} duration={15} onComplete={onComplete} type="dark" /> */}
-
       <Box width={1} height={1} display="flex" flexDirection="column" alignItems="center">
         <Grid item xs={12} sm={8} md={6} className="interstitial-content-area">
           <Box>

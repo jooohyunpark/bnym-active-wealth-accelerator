@@ -22,7 +22,7 @@ export const RedirectToHome = () => {
   return null
 }
 
-export const cleanURL = (url) => {
+export const cleanPath = (url) => {
   return url.replace('//', '/')
 }
 
@@ -135,3 +135,9 @@ export const onEnterPressed = (e, func = () => {}) => {
 export const removeTrailingSlashes = (url) => {
   return url.replace(/\/+$/, '')
 }
+
+export const removeProtocols = (url) => {
+  return url.replace(/(^\w+:|^)\/\//, '')
+}
+
+export const mapRange = (value, x1, y1, x2, y2) => ((value - x1) * (y2 - x2)) / (y1 - x1) + x2

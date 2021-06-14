@@ -106,7 +106,6 @@ const Chart = (props) => {
       .enter()
       .append('text')
       .attr('class', 'label')
-      // .attr('aria-label', (d, i) => `${d.data.label} score ${d.data.score}`)
       .attr('fill', color.labelText)
       .attr('id', (d, i) => 'label-' + i)
       .attr('dy', (d, i) =>

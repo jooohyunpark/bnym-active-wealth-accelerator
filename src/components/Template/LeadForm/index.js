@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Box } from '@material-ui/core'
 import './index.scss'
-import { cleanURL, animateTo } from '@/util'
+import { cleanPath, animateTo } from '@/util'
 import { PROJECT_PATH, emailRegex } from '@/data'
 
 const LeadForm = () => {
@@ -20,7 +20,7 @@ const LeadForm = () => {
       const redirectURL = ref.current.querySelector('#redirecturl')
 
       if (redirectURL) {
-        redirectURL.value = cleanURL(PROJECT_PATH + '/thank-you.html')
+        redirectURL.value = cleanPath(PROJECT_PATH + '/thank-you.html')
 
         clearInterval(checkRedirectURL)
       }

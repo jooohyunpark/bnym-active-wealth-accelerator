@@ -7,7 +7,6 @@ import { selectResponseCount } from '@/store/slices/responseSlice'
 import data from '@/data/index.json'
 import { useHistory } from 'react-router-dom'
 import { animateTo } from '@/util'
-import Timer from '@/components/UI/Timer'
 import ClipBackground from '@/components/UI/ClipBackground'
 import { colors } from '@/styles/theme'
 import NextButton from '@/components/UI/Button/Next'
@@ -75,8 +74,6 @@ const Intro = (props) => {
         display: 'none'
       }}>
       <ClipBackground src={bgImageSrc} alt={bgImageAlt} />
-
-      {/* <Timer duration={15} onComplete={onClick} type="light" /> */}
 
       <Grid container item className="intro-content">
         <Grid container item className="content-area">

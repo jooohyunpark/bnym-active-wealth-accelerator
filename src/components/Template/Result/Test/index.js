@@ -8,7 +8,7 @@ import { Grid, Modal, Backdrop, Fade, IconButton, Box, useMediaQuery } from '@ma
 import CloseIcon from '@material-ui/icons/Close'
 import theme, { colors } from '@/styles/theme'
 import '../index.scss'
-import { animateTo, cleanURL } from '@/util'
+import { animateTo, cleanPath } from '@/util'
 import { PROJECT_PATH } from '@/data'
 import ResultNav from '@/components/Template/Result/ResultNav'
 import Button from '@/components/UI/Button'
@@ -128,7 +128,7 @@ const Result = () => {
                 ref={iframe}
                 id="iframe"
                 title="Lead Generation Form"
-                src={cleanURL(PROJECT_PATH + '/form.html')}></iframe>
+                src={cleanPath(PROJECT_PATH + '/form.html')}></iframe>
             </Box>
           </Box>
         </Fade>

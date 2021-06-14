@@ -4,12 +4,17 @@ import Header from '@/components/UI/Header'
 import Footer from '@/components/UI/Footer'
 import Landing from '@/components/Template/Landing'
 import { Container, Grid, Box } from '@material-ui/core'
-import '@/util/hotjar'
-// import Result from '@/components/Template/Result/Test'
+import { Helmet } from 'react-helmet'
+import { taggingScript } from '@/data'
 
 const App = () => {
   return (
     <Container maxWidth="xl">
+      {/* head - tagging */}
+      <Helmet>
+        <script src={taggingScript(window.location.hostname)} async></script>
+      </Helmet>
+
       <div className="app">
         <Landing />
 
@@ -24,8 +29,6 @@ const App = () => {
             </Grid>
           </Box>
         </main>
-
-        {/* <Result /> */}
 
         <footer>
           <Footer />

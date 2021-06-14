@@ -13,8 +13,6 @@ import { upperCase } from 'lodash-es'
 import { CSSTransition } from 'react-transition-group'
 import { headerHeight, colors, transitionDuration } from '@/styles/theme'
 
-// const mapRange = (value, x1, y1, x2, y2) => ((value - x1) * (y2 - x2)) / (y1 - x1) + x2
-
 const ProgressBar = withStyles((theme) => ({
   root: {
     height: 4,
@@ -77,7 +75,6 @@ const Progress = () => {
                   <ProgressBar
                     variant="determinate"
                     value={progress}
-                    // value={mapRange(progress, 0, 100, -1, 100)}
                     aria-label={`${section.name} section progress bar`}
                     aria-hidden={section.name === currentSection ? false : true}
                     className={

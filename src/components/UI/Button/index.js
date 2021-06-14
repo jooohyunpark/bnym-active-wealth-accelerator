@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, withStyles } from '@material-ui/core'
-import theme, { colors, buttonHeight } from '@/styles/theme'
+import theme from '@/styles/theme'
 
 const StyledButton = withStyles({
   root: {

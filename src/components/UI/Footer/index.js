@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import { Box } from '@material-ui/core'
 import ArrowRightIcon from '@material-ui/icons/ArrowRight'
 import './index.scss'
@@ -29,10 +29,6 @@ const Footer = () => {
           <ArrowRightIcon />
           <span>Legal</span>
         </div>
-
-        <Button variant="outlined" href="https://www.bnymellonwealth.com/contact-us.jsp">
-          Get in touch
-        </Button>
       </div>
       <div className="legal-content">
         <p>
@@ -64,6 +60,12 @@ const Footer = () => {
           BNY Mellon Wealth Management will not provide products or services where those products or
           services are not permitted under applicable law or under firm policies.
         </p>
+      </div>
+
+      <div className="legal-contact-us">
+        <Button variant="outlined" href="https://www.bnymellonwealth.com/contact-us.jsp">
+          Contact Us
+        </Button>
       </div>
     </Box>
   )

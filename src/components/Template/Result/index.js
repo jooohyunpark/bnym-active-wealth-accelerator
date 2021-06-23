@@ -15,7 +15,7 @@ import './index.scss'
 import { animateTo, cleanPath } from '@/util'
 import { PROJECT_PATH } from '@/data'
 import ResultNav from '@/components/Template/Result/ResultNav'
-import Button from '@/components/UI/Button'
+import CTA from './CTA'
 
 const Result = () => {
   const dispatch = useDispatch()
@@ -27,7 +27,7 @@ const Result = () => {
   const responseData = useSelector(selectResponseData)
 
   const [open, setOpen] = useState(true)
-  const [submitted, setSubmitted] = useState(false)
+  // const [submitted, setSubmitted] = useState(false)
   const [activeIndex, setActiveIndex] = useState(-1)
 
   const above_sm = useMediaQuery((theme) => theme.breakpoints.up('sm'))
@@ -58,14 +58,14 @@ const Result = () => {
         }
       }
       _satellite.track('process', { status: 'end' })
-      console.log('tagging -------------------- process end')
+      // console.log('tagging -------------------- process end')
     }
   }, [])
 
-  // Note that this runs forcedly by onClose event
-  useEffect(() => {
-    if (window.formSubmitted) setSubmitted(true)
-  }, [window.formSubmitted])
+  // // Note that this runs forcedly by onClose event
+  // useEffect(() => {
+  //   if (window.formSubmitted) setSubmitted(true)
+  // }, [window.formSubmitted])
 
   //skip button onclick event inside iframe
   const bindSkipButtonOnClick = () => {
@@ -79,7 +79,7 @@ const Result = () => {
           /** analytics */
           if (window.formSubmitted) return
           _satellite.track('submit', { ['email-form']: 'No' })
-          console.log('tagging-------------------- email-form No')
+          // console.log('tagging-------------------- email-form No')
         }
         clearInterval(listenSkipButton)
       }
@@ -130,7 +130,7 @@ const Result = () => {
                   /** analytics */
                   if (window.formSubmitted) return
                   _satellite.track('submit', { ['email-form']: 'No' })
-                  console.log('tagging-------------------- email-form No')
+                  // console.log('tagging-------------------- email-form No')
                 }}
                 style={{
                   position: 'absolute',
@@ -212,31 +212,10 @@ const Result = () => {
                       {responseData.summary.header}
                     </h2>
                     <p>{responseData.summary.body}</p>
-                    <br />
-                    <p>Click through each practice for your customized recommendations.</p>
                   </div>
 
                   {/* cta */}
-                  {submitted ? null : (
-                    <Box
-                      className="contact-us"
-                      width={1}
-                      p={2}
-                      bgcolor="#C6D1D6"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="space-between">
-                      <span role="text">Want to learn more about Managing your Active Wealth?</span>
-                      <Button
-                        variant="contained"
-                        onClick={() => {
-                          setOpen(true)
-                          bindSkipButtonOnClick()
-                        }}>
-                        Contact us
-                      </Button>
-                    </Box>
-                  )}
+                  <CTA href="https://www.bnymellonwealth.com/contact-us.jsp" />
                 </div>
               ) : (
                 // section
@@ -277,33 +256,23 @@ const Result = () => {
                             </a>
                           </div>
                           <p>{article.copy}</p>
+
+                          <a
+                            className="read-more"
+                            href={article.link}
+                            target="_blank"
+                            title={article.linkText}
+                            role="link"
+                            tabIndex="0">
+                            READ MORE
+                          </a>
                         </div>
                       )
                     })}
                   </div>
 
                   {/* cta */}
-                  {submitted ? null : (
-                    <Box
-                      className="contact-us"
-                      width={1}
-                      p={2}
-                      mt={8}
-                      bgcolor="#C6D1D6"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="space-between">
-                      <span role="text">Want to learn more about Managing your Active Wealth?</span>
-                      <Button
-                        variant="contained"
-                        onClick={() => {
-                          setOpen(true)
-                          bindSkipButtonOnClick()
-                        }}>
-                        Contact us
-                      </Button>
-                    </Box>
-                  )}
+                  <CTA href="https://www.bnymellonwealth.com/contact-us.jsp" />
                 </div>
               )}
             </Box>

@@ -4,6 +4,8 @@ $legalBG: #f2f2f2;
 $legalHeight: 100px;
 
 .legal {
+  position: relative;
+
   .legal-area {
     display: flex;
     align-items: center;
@@ -27,10 +29,6 @@ $legalHeight: 100px;
         margin-left: $spacingBase;
       }
     }
-
-    .button {
-      margin: 0 $spacingBase * 4;
-    }
   }
 
   .legal-content {
@@ -40,6 +38,21 @@ $legalHeight: 100px;
 
     p {
       margin-bottom: $spacingBase * 2;
+    }
+  }
+
+  .legal-contact-us {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: $legalHeight;
+    pointer-events: none;
+
+    .button {
+      margin: 0 $spacingBase * 4;
+      pointer-events: auto;
     }
   }
 

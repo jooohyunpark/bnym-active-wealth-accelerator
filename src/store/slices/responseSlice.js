@@ -40,7 +40,7 @@ export const responseSlice = createSlice({
       // generate Summary based on score
       state.responseData = calculateResponseSummary(state.value)
 
-      console.log('response: ', current(state).value)
+      // console.log('response: ', current(state).value)
       // console.log('chart data: ', current(state).chartData)
       // console.log('response data: ', current(state).responseData)
       // console.log('total score: ', current(state).totalScore)

@@ -220,11 +220,11 @@ const Question = (props) => {
       ['question-number']: sectionQuenstionIndex,
       ['user-selection']: selection
     })
-    console.log('tagging -------------------- question-response: ', {
-      subsection: section,
-      ['question-number']: sectionQuenstionIndex,
-      ['user-selection']: selection
-    })
+    // console.log('tagging -------------------- question-response: ', {
+    //   subsection: section,
+    //   ['question-number']: sectionQuenstionIndex,
+    //   ['user-selection']: selection
+    // })
   }
 
   return (
@@ -261,10 +261,10 @@ const Question = (props) => {
           <Grid container item spacing={1}>
             <Grid ref={card} item xs={12}>
               <Box className="card-question" bgcolor="#fff">
-                <h4 role="heading" aria-level="1">
-                  {eyebrow}
-                </h4>
-                <h2>{text}</h2>
+                <div className="eyebrow h4">{eyebrow}</div>
+                <h2 role="heading" aria-level="1">
+                  {text}
+                </h2>
               </Box>
             </Grid>
 

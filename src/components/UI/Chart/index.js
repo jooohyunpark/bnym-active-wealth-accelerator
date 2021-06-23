@@ -21,6 +21,7 @@ const lineWidth = 4
 const adeg = Math.PI / 180
 const backgroundStep = 6
 const transitionDuration = 300
+const descriptionHeight = 30
 
 const Chart = (props) => {
   const data = useSelector(selectChartData)
@@ -42,7 +43,7 @@ const Chart = (props) => {
       720
     )
     const width = size - margin.left - margin.right
-    const height = size - margin.top - margin.bottom
+    const height = size - margin.top - margin.bottom - descriptionHeight
     const innerRadius = 0
     const radius = Math.min(width, height) / 2
     const labelAreaSize = (radius - lineWidth) / backgroundStep + lineWidth
@@ -137,6 +138,14 @@ const Chart = (props) => {
       .style('cursor', 'pointer')
       .on('click', function (e, d) {
         onClick(d.index)
+
+        document.querySelector('.result-content').scrollTop = 0
+
+        /* Analytics */
+        _satellite.track('results-link-tracking', { linkName: d.data.label })
+        // console.log('tagging------------------------- resultnav', {
+        //   linkName: d.data.label
+        // })
       })
       .on('mouseover', function (e, d) {
         d3.select('#labelArea-' + d.index)
@@ -199,7 +208,6 @@ const Chart = (props) => {
     }
 
     return () => {
-      console.log('destory d3 chart')
       svg.selectAll('*').remove()
     }
   }, [windowSize])
@@ -250,11 +258,16 @@ const Chart = (props) => {
       height={1}
       display="flex"
       justifyContent="center"
-      alignItems="center">
+      alignItems="center"
+      flexDirection="column">
       <svg
         ref={ref}
         aria-label="Interactive chart displaying questionnaire results"
         role="img"></svg>
+
+      <p className="chart-description" style={{ height: descriptionHeight }}>
+        Click through to see your recommendations
+      </p>
     </Box>
   )
 }

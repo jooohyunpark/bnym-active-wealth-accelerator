@@ -28,7 +28,7 @@ const ThankYou = () => {
 
     /* analytics */
     parent._satellite.track('submit', { ['email-form']: 'Yes' })
-    console.log('tagging-------------------- email-form Yes!!!!')
+    // console.log('tagging-------------------- email-form Yes!!!!')
 
     return () => {
       window.parent.removeEventListener('resize', resize)

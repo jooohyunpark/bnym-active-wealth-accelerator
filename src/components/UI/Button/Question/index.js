@@ -1,8 +1,9 @@
 import React, { useRef } from 'react'
 import { Button, withStyles, useMediaQuery } from '@material-ui/core'
-import DoneIcon from '@material-ui/icons/Done'
-import ClearIcon from '@material-ui/icons/Clear'
 import theme, { colors } from '@/styles/theme'
+import NoIcon from '@/assets/svg/NoIcon'
+import SomewhatIcon from '@/assets/svg/SomewhatIcon'
+import YesIcon from '@/assets/svg/YesIcon'
 import './index.scss'
 
 const StyledButton = withStyles({
@@ -31,7 +32,7 @@ const StyledButton = withStyles({
   startIcon: {
     marginRight: 0,
     marginLeft: 0,
-    marginBottom: 8
+    marginBottom: theme.spacing(2)
   }
 })(Button)
 
@@ -45,11 +46,11 @@ const QuestionButton = (props) => {
   const icon = (text) => {
     switch (text.toLowerCase()) {
       case 'yes':
-        return <DoneIcon style={{ color: colors.orange, fontSize: above_md ? 40 : 24 }} />
+        return <YesIcon color={colors.orange} height={above_md ? 24 : 16} />
       case 'somewhat':
-        return <DoneIcon style={{ color: colors.webSafeGold, fontSize: above_md ? 40 : 24 }} />
+        return <SomewhatIcon color={colors.webSafeGold} height={above_md ? 24 : 16} />
       case 'no':
-        return <ClearIcon style={{ color: colors.grayscale[3], fontSize: above_md ? 40 : 24 }} />
+        return <NoIcon color={colors.grayscale[3]} height={above_md ? 24 : 16} />
       default:
         return null
     }

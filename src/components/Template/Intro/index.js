@@ -109,7 +109,7 @@ const Intro = (props) => {
 
         <Grid item xs={12} className="button-area">
           <NextButton onClick={onClick} type="intro">
-            {introId === 1 ? 'First Question' : 'Next Question'}
+            {introId === 1 ? 'First question' : 'Next question'}
           </NextButton>
         </Grid>
       </Grid>

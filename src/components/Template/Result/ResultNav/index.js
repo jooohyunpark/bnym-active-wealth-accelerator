@@ -14,7 +14,7 @@ const ResultNav = (props) => {
 
     /* Analytics */
     _satellite.track('results-link-tracking', { linkName: 'overview' })
-    console.log('tagging------------------------- resultnav', { linkName: 'overview' })
+    // console.log('tagging------------------------- resultnav', { linkName: 'overview' })
   }
 
   const onClick = (i, name) => {
@@ -23,9 +23,9 @@ const ResultNav = (props) => {
 
     /* Analytics */
     _satellite.track('results-link-tracking', { linkName: name })
-    console.log('tagging------------------------- resultnav', {
-      linkName: name
-    })
+    // console.log('tagging------------------------- resultnav', {
+    //   linkName: name
+    // })
   }
 
   return (
@@ -38,7 +38,7 @@ const ResultNav = (props) => {
       justifyContent="space-between"
       px={4}>
       <h3 className="PublicoPro">Your Results</h3>
-      <nav className="result-nav-links" aria-label="Results menu" tabIndex="0">
+      <nav className="result-nav-links">
         <a
           className={activeIndex === -1 ? 'active' : ''}
           onClick={onClickOverview}

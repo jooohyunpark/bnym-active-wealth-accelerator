@@ -87,7 +87,7 @@ module.exports = {
         'twitter:description': {
           name: 'twitter:description',
           content:
-            'Do you want to make the most of your investments? Through a series of simple questions, the BNY Mellon Active Wealth Accelerator, can help you assess where you stand financially, and provide insights for how you can make the most of your investments.'
+            'Do you want to make the most of your investments? Through a series of simple questions, the BNY Mellon Active Wealth Accelerator can help you assess where you stand financially, and provide insights for how you can make the most of your investments.'
         },
         'twitter:image': {
           name: 'twitter:image',

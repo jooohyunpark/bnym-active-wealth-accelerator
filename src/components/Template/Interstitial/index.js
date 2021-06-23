@@ -24,9 +24,9 @@ const Interstitial = (props) => {
 
     /* Analytics */
     _satellite.track(section, { [`${section}`]: answer === 2 ? 'yes' : 'no' })
-    console.log('tagging---------------------------- insterstitial', {
-      [`${section}`]: answer === 2 ? 'yes' : 'no'
-    })
+    // console.log('tagging---------------------------- insterstitial', {
+    //   [`${section}`]: answer === 2 ? 'yes' : 'no'
+    // })
   }, [])
 
   return (

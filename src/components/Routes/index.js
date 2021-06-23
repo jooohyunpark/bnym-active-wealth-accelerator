@@ -72,18 +72,18 @@ const Routes = () => {
 
   useEffect(() => {
     if (currentSection) {
-      console.log('tagging --------------------start currentSection: ', currentSection)
+      // console.log('tagging --------------------start currentSection: ', currentSection)
       _satellite.track(currentSection, { status: 'start' })
 
       if (previousSection == null) {
-        console.log('tagging -------------------- process start')
+        // console.log('tagging -------------------- process start')
         _satellite.track('process', { status: 'start' })
       }
     }
 
     if (previousSection) {
       _satellite.track(previousSection, { status: 'end' })
-      console.log('tagging --------------------end previousSection: ', previousSection)
+      // console.log('tagging --------------------end previousSection: ', previousSection)
     }
   }, [currentSection])
   /*  */

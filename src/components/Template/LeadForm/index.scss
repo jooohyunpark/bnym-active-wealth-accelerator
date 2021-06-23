@@ -79,11 +79,18 @@ $height: 48px;
         @include fontSize(16, 24);
         font-weight: 700;
         color: $blue;
+
+        @include focus;
       }
     }
 
     .form-legal {
       color: map-get($grayscale, 2);
+
+      a {
+        text-decoration: underline;
+        @include focus;
+      }
     }
   }
 }

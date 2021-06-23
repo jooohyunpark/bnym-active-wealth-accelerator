@@ -104,7 +104,7 @@ const LeadForm = () => {
         const legal = document.createElement('p')
         legal.classList.add('form-legal')
         legal.innerHTML =
-          'For more information about how BNY Mellon Wealth Management uses your personal information, <a href="https://urldefense.com/v3/__https:/www.bnymellonwealth.com/privacy.jsp__;!!IHJ3XrWN4X8!ckHdrtGPf1zGtIW7me8g94AlV1m1UX8ypeDDr3GeAa0b5158HTCwFB41v5pQNXKAUA$" target="_blank">click here.</a>'
+          'For more information about how BNY Mellon Wealth Management uses your personal information, <a href="https://urldefense.com/v3/__https:/www.bnymellonwealth.com/privacy.jsp__;!!IHJ3XrWN4X8!ckHdrtGPf1zGtIW7me8g94AlV1m1UX8ypeDDr3GeAa0b5158HTCwFB41v5pQNXKAUA$" target="_blank" tabindex="0">click here.</a>'
         form.querySelector('.skip-button-div').after(legal)
 
         clearInterval(checkForm)

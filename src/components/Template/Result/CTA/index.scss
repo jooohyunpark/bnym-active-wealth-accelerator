@@ -1,0 +1,28 @@
+@import '@/styles/vars';
+@import '@/styles/mixins';
+
+.contact-us {
+  span {
+    max-width: 360px;
+  }
+
+  .button {
+    min-width: 120px;
+    margin-left: $spacingBase;
+  }
+
+  @include media-below(md) {
+    span {
+      max-width: unset;
+    }
+  }
+
+  @include media-below(sm) {
+    flex-direction: column;
+
+    .button {
+      width: 100%;
+      margin-top: $spacingBase * 3;
+    }
+  }
+}

@@ -16,6 +16,7 @@ import { animateTo, cleanPath } from '@/util'
 import { PROJECT_PATH } from '@/data'
 import ResultNav from '@/components/Template/Result/ResultNav'
 import CTA from './CTA'
+import { trim } from 'lodash-es'
 
 const Result = () => {
   const dispatch = useDispatch()
@@ -225,7 +226,28 @@ const Result = () => {
                     <h2 role="heading" aria-level="1">
                       {responseData.sections[activeIndex].section}
                     </h2>
-                    <p>{responseData.sections[activeIndex].copy}</p>
+
+                    {responseData.sections[activeIndex].super ? (
+                      // in case it has super
+                      <p>
+                        {trim(
+                          responseData.sections[activeIndex].copy.split(
+                            responseData.sections[activeIndex].super.text
+                          )[0]
+                        )}
+                        &nbsp;
+                        {responseData.sections[activeIndex].super.text}
+                        <sup>{responseData.sections[activeIndex].super.index}</sup>
+                        &nbsp;
+                        {trim(
+                          responseData.sections[activeIndex].copy.split(
+                            responseData.sections[activeIndex].super.text
+                          )[1]
+                        )}
+                      </p>
+                    ) : (
+                      <p>{responseData.sections[activeIndex].copy}</p>
+                    )}
                   </div>
                   <hr />
 
@@ -273,6 +295,15 @@ const Result = () => {
 
                   {/* cta */}
                   <CTA href="https://www.bnymellonwealth.com/contact-us.jsp" />
+
+                  {/* super reference */}
+                  {responseData.sections[activeIndex].super ? (
+                    <p className="super-reference">
+                      <sup>{responseData.sections[activeIndex].super.index}</sup>
+                      &nbsp;
+                      {responseData.sections[activeIndex].super.reference}
+                    </p>
+                  ) : null}
                 </div>
               )}
             </Box>

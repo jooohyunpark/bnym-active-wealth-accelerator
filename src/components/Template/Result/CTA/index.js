@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box } from '@material-ui/core'
 import Button from '@/components/UI/Button'
+import './index.scss'
 
 const CTA = ({ href = '' }) => {
   return (

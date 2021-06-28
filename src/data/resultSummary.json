@@ -141,7 +141,12 @@
           "type": "low",
           "scoreHigh": 2,
           "scoreLow": 0,
-          "text": "As one of the safest financial institutions in the world, we understand just how important it is to implement advanced planning to create sustainable, multigenerational wealth. We can offer you recommendations for how you can protect the wealth you’ve worked so hard to build."
+          "text": "As one of the safest financial institutions in the world, we understand just how important it is to implement advanced planning to create sustainable, multigenerational wealth. We can offer you recommendations for how you can protect the wealth you’ve worked so hard to build.",
+          "super": {
+            "text": "safest financial institutions",
+            "reference": "Global Finance Magazine’s Ranking of the World’s Safest Commercial Banks, Nov 2020",
+            "index": 1
+          }
         }
       ]
     }

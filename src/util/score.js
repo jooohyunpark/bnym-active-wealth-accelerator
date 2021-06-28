@@ -41,59 +41,68 @@ export const calculateChartScore = (scores) => {
 }
 
 export const calculateResponseSummary = (scores) => {
+  var responseData = {
+    summary: {},
+    sections: [
+      { section: 'invest', score: 0, recommendations: [], articles: [], articlesIncluded: [] },
+      { section: 'borrow', score: 0, recommendations: [], articles: [], articlesIncluded: [] },
+      { section: 'spend', score: 0, recommendations: [], articles: [], articlesIncluded: [] },
+      { section: 'manage', score: 0, recommendations: [], articles: [], articlesIncluded: [] },
+      { section: 'protect', score: 0, recommendations: [], articles: [], articlesIncluded: [] }
+    ]
+  }
 
-  var responseData = { 
-    "summary": {},
-    "sections": [{"section" : "invest", "score": 0, "recommendations": [], "articles": [], "articlesIncluded": []},
-                 {"section" : "borrow", "score": 0, "recommendations": [], "articles": [], "articlesIncluded": []},
-                 {"section" : "spend", "score": 0, "recommendations": [], "articles": [], "articlesIncluded": []},
-                 {"section" : "manage", "score": 0, "recommendations": [], "articles": [], "articlesIncluded": []},
-                 {"section" : "protect", "score": 0, "recommendations": [], "articles": [], "articlesIncluded": []}]
-  };
-
-  var totalScore = 0;
+  var totalScore = 0
 
   Object.keys(scores).forEach(function (key) {
     var section = responseData.sections.find((x) => x.section === scores[key].section)
-    section.score = section.score + scores[key].score 
+    section.score = section.score + scores[key].score
 
     //set recommendations and articles
-    var resultsByQuestion = recommendationsAndArticles.find((x) => x.questionId === scores[key].questionId).results
+    var resultsByQuestion = recommendationsAndArticles.find(
+      (x) => x.questionId === scores[key].questionId
+    ).results
 
-    for (let result of resultsByQuestion)
-    {
-      if (result.score.includes(scores[key].score ))
-      {
-        if (result.recommendation != "")
-         section.recommendations.push(result.recommendation)
-        
-        if (!section.articlesIncluded.includes(result.articleId))
-        { 
+    for (let result of resultsByQuestion) {
+      if (result.score.includes(scores[key].score)) {
+        if (result.recommendation != '') section.recommendations.push(result.recommendation)
+
+        if (!section.articlesIncluded.includes(result.articleId)) {
           section.articlesIncluded.push(result.articleId)
           var articleDetails = articles.find((x) => x.articleId === result.articleId)
           section.articles.push({
-            "type": articleDetails.type,
-            "linkText" : articleDetails.linkText,
-            "link": articleDetails.link,
-            "copy": articleDetails.copy
-          }) 
+            type: articleDetails.type,
+            linkText: articleDetails.linkText,
+            link: articleDetails.link,
+            copy: articleDetails.copy
+          })
         }
       }
     }
-    totalScore = totalScore + scores[key].score;
+    totalScore = totalScore + scores[key].score
   })
-  
+
   // set header and body for overall response
   var summary = data.summary.find((x) => totalScore >= x.scoreLow && totalScore <= x.scoreHigh)
   responseData.summary.header = summary.header
   responseData.summary.body = summary.body
-  
+
   // set copy for section responses
   Object.keys(responseData.sections).forEach(function (key) {
     var sections = data.section.find((x) => x.name === responseData.sections[key].section)
-    responseData.sections[key].copy = sections.result.find((x) => responseData.sections[key].score >= x.scoreLow && responseData.sections[key].score <= x.scoreHigh).text
+    responseData.sections[key].copy = sections.result.find(
+      (x) =>
+        responseData.sections[key].score >= x.scoreLow &&
+        responseData.sections[key].score <= x.scoreHigh
+    ).text
+
+    // set super data if exists
+    responseData.sections[key].super = sections.result.find(
+      (x) =>
+        responseData.sections[key].score >= x.scoreLow &&
+        responseData.sections[key].score <= x.scoreHigh
+    ).super
   })
 
   return responseData
-   
 }

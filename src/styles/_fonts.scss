@@ -237,6 +237,11 @@
   color: map-get($grayscale, 2);
 }
 
+@mixin superReferenceFont {
+  @include Akkurat;
+  @include fontSize(14, 20);
+}
+
 .PublicoPro {
   @include PublicoPro;
 }
@@ -311,4 +316,22 @@ a:hover {
   color: inherit;
   text-decoration: inherit;
   outline: inherit;
+}
+
+sup {
+  @include fontSize(12, 18);
+  font-weight: 700;
+
+  @include font-media-below(md) {
+    @include fontSize(10, 16);
+  }
+}
+
+.super-reference {
+  @include superReferenceFont;
+  margin-top: $spacingBase * 3;
+
+  sup {
+    @include fontSize(10, 16);
+  }
 }

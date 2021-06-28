@@ -1,2 +1,2 @@
 # BNY Mellon Active Wealth Accelerator: Safeguard Your Legacy
-Through a simple series of questions, the BNY Mellon Active Wealth Accelerator can provide insights for how you can make the most of your investments.
+Introducing the Active Wealth Accelerator, an interactive tool that takes you through a series of questions about our five Active Wealth practices, evaluates your wealth strategy, and shares customized recommendations and articles, helping you to gain a clearer understanding of your financial potential.

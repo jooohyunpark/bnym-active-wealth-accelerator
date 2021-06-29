@@ -4,7 +4,7 @@
 .result-nav {
   height: $resultNavHeight;
 
-  h3 {
+  .h3 {
     color: $white;
 
     @include media-below(md) {

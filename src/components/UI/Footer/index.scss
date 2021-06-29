@@ -19,7 +19,6 @@ $legalHeight: 100px;
       padding: 0 $spacingBase * 4;
       cursor: pointer;
       height: 100%;
-      @include focus;
 
       svg {
         transition: all 0.2s linear;
@@ -27,6 +26,7 @@ $legalHeight: 100px;
 
       span {
         margin-left: $spacingBase;
+        @include focus;
       }
     }
   }

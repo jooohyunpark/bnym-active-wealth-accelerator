@@ -21,13 +21,13 @@ const Footer = () => {
       <div className="legal-area">
         <div
           className="legal-cta"
-          role="button"
-          tabIndex="0"
           aria-expanded={expanded}
           onClick={() => setExpanded(!expanded)}
           onKeyDown={(e) => onEnterPressed(e, () => setExpanded(!expanded))}>
           <ArrowRightIcon />
-          <span>Legal</span>
+          <span role="button" tabIndex="0">
+            Legal
+          </span>
         </div>
       </div>
       <div className="legal-content">

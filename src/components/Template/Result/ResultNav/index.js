@@ -37,7 +37,7 @@ const ResultNav = (props) => {
       alignItems="center"
       justifyContent="space-between"
       px={4}>
-      <h3 className="PublicoPro">Your Results</h3>
+      <div className="h3 PublicoPro">Your Results</div>
       <nav className="result-nav-links">
         <a
           className={activeIndex === -1 ? 'active' : ''}

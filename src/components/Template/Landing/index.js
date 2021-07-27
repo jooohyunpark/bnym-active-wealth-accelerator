@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
-import { useLocation } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import { animateTo, staggerFromTo } from '@/util'
 import './index.scss'
 import gsap from 'gsap'
 import ClipBackground from '@/components/UI/ClipBackground'
 import NextButton from '@/components/UI/Button/Next'
 import Header from '@/components/UI/Header/Landing'
-import { PROJECT_PATH } from '@/data'
 import data from '@/data/index.json'
 
 const landingPage = document.querySelector('.landing')
@@ -23,24 +22,8 @@ ReactDOM.render(
 )
 
 /* Button - Experience starts here */
-const onClick = () => {
-  gsap.set([document.querySelector('.app header'), document.querySelector('.app main')], {
-    display: 'block'
-  })
-
-  animateTo(
-    landingPage,
-    {
-      opacity: 0,
-      display: 'none'
-    },
-    () => window.location.assign(PROJECT_PATH + '#/' + data[0].intro.name)
-  )
-}
 ReactDOM.render(
-  <NextButton variant="contained" onClick={onClick}>
-    Let's get started
-  </NextButton>,
+  <NextButton variant="contained">Let's get started</NextButton>,
   landingPage.querySelector('.button-area .button-div')
 )
 
@@ -49,6 +32,7 @@ ReactDOM.render(<Header />, landingPage.querySelector('header'))
 /* footer will come from .app to keep the expanded state */
 
 const Landing = () => {
+  const history = useHistory()
   const location = useLocation()
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -84,6 +68,26 @@ const Landing = () => {
       })
     }
   }, [location])
+
+  // bind next button onclick using history api
+  useEffect(() => {
+    const nextButton = document.querySelector('.landing .next-button')
+
+    nextButton.onclick = () => {
+      gsap.set([document.querySelector('.app header'), document.querySelector('.app main')], {
+        display: 'block'
+      })
+
+      animateTo(
+        landingPage,
+        {
+          opacity: 0,
+          display: 'none'
+        },
+        () => history.push('/' + data[0].intro.name)
+      )
+    }
+  }, [])
 
   return null
 }
